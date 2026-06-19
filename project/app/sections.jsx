@@ -257,13 +257,6 @@ function SecQuiz() {
 
 /* ---------- 5 · 成品展示 ---------- */
 function SecFinal() {
-  const rows = [
-  ["player_name = '小明'", '遊戲畫面顯示玩家名稱'],
-  ["print(f'得分：{score}')", '即時分數顯示在畫面上'],
-  ['if score > high_score（下週）', '自動偵測新高分並提示'],
-  ['while is_running（第三週）', '遊戲主迴圈一直跑'],
-  ['snake.append(new_head)（第五週）', '蛇吃到食物後身體變長']];
-
   return (
     <div className="anim-in">
       <div className="section-eyebrow">🎮 第四部分 · 40–45 分鐘</div>
@@ -272,18 +265,6 @@ function SecFinal() {
 
       <div className="block">
         <SnakeGame />
-      </div>
-
-      <div className="block" style={{ marginTop: 'var(--sp-6)' }}>
-        <h3>今天＆之後要學的 → 六週後能做到的</h3>
-        <table className="dtable">
-          <thead><tr><th>今天＆之後要學的</th><th>六週後能做到的</th></tr></thead>
-          <tbody>
-            {rows.map((r, i) =>
-            <tr key={i}><td><code>{r[0]}</code></td><td>{r[1]}</td></tr>
-            )}
-          </tbody>
-        </table>
       </div>
     </div>);
 
